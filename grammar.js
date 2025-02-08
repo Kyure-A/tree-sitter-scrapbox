@@ -22,6 +22,12 @@ module.exports = grammar({
             $.math,
         )
 
+        code_block: $ => seq(
+            "code:", "/.*/", optional($.language), "\n", repeat(/.*/), 
+        )
+
+        language: $ => /.*/
+        
         bold: $ => seq(
             "[", "*", /.*/, "]"
         )
@@ -30,7 +36,7 @@ module.exports = grammar({
             "[", "/", /.*/, "]"
         )
 
-        strikeThrough: $ => seq(
+        strike_through: $ => seq(
             "[", "-", /.*/, "]"
         )
 

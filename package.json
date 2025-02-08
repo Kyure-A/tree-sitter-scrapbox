@@ -1,0 +1,15 @@
+{
+    "name": "tree-sitter-scrapbox",
+    "version": "0.0.0",
+    "description": "Scrapbox grammar for tree-sitter",
+    "main": "grammar.js",
+    "repository": "https://github.com/Kyure-A/tree-sitter-scrapbox",
+    "author": "Kyure_A",
+    "license": "GPL",
+    "devDependencies": {
+        "tree-sitter-cli": "^0.13.5"
+    },
+    "scripts": {
+        "build": "tree-sitter generate && node-gyp build"
+    }
+}
